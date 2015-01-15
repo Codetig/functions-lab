@@ -51,3 +51,35 @@ function multiplyArray(array) {
     }
     return multSum;
 }
+
+//Bonus 1
+function reverseString(str) {
+    var revStr = [];
+    var array = str.split("");
+    for(i = array.length - 1; i >= 0; i--) {
+        revStr.push(array[i]);
+    }
+    return revStr.join("");
+}
+
+//Bonus 2
+function findLongestWord(array) {
+    var str = "";
+    for(i = 0; i < array.length; i++) {
+        if (array[i].length > str.length) {
+            str = array[i]
+        }
+    }
+    return str;
+}
+
+//Bonus 3
+function filterLongWords(array, num) {
+    var str = [];
+    for(i = 0; i < array.length; i++) {
+        if (array[i].length > num) {
+            str.push(array[i])
+        }
+    }
+    return str;
+}
